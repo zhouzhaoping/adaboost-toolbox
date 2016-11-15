@@ -21,6 +21,7 @@
      WINDOW       0.86      0.51      0.64       300
 avg / total       0.87      0.84      0.84      2100
 </pre>
+
 ####OVO(*one-versus-one*)
 - one_versus_rest.py: 
 调用Adaboost使用1v1算法实现多分类
@@ -34,7 +35,8 @@ avg / total       0.87      0.84      0.84      2100
         SKY       0.03      0.00      0.01       300
      WINDOW       0.87      0.11      0.20       300
 avg / total       0.39      0.34      0.27      2100
-</pre>
+</pre>  
+
 ####Adaboost.MH算法(*Improved boosting algorithms using confidence-rated predictions*)
 - adaboostmh.py:  
 基于Adaboost，改写成多分类形式AdaBoostMH
