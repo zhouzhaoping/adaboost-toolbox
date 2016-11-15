@@ -36,4 +36,4 @@ predict_sum = []
 for i in range(len(test_x)):
     l = [x[i] for x in predictlist]
     predict_sum.append(classes_name[l.index(max(l))])
-print(metrics.classification_report(test_y, predict_sum))
+print metrics.classification_report(test_y, predict_sum)
