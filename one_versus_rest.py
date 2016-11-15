@@ -15,7 +15,7 @@ train_x, train_y, test_x, test_y = loadData('segmentation.data', 'segmentation.t
 start = time.clock()
 modellist = []
 for i in range(len(classes_name)):
-    model = AdaBoost(max_iter=50) # 基于决策树的adaboost，最大迭代次数max_iter
+    model = AdaBoost(max_iter=50)  # 基于决策树的adaboost，最大迭代次数max_iter
     new_train_y = []
     for x in train_y:
         if x == classes_name[i]:

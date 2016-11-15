@@ -18,9 +18,9 @@ for i in range(len(train_x)):
 # 1v1算法执行
 start = time.clock()
 # 生成模型矩阵
-modelmatrix = [None]*len(classes_name)
+modelmatrix = [None] * len(classes_name)
 for i in range(len(modelmatrix)):
-    modelmatrix[i] = [AdaBoost(max_iter=50)]*len(classes_name) # 基于决策树的adaboost，最大迭代次数max_iter
+    modelmatrix[i] = [AdaBoost(max_iter=50)] * len(classes_name)  # 基于决策树的adaboost，最大迭代次数max_iter
 for i in range(len(classes_name)):
     for j in range(len(classes_name)):
         if i >= j:
@@ -30,8 +30,8 @@ for i in range(len(classes_name)):
             new_train_y = []
             new_train_x.extend(train_x_list[i])
             new_train_x.extend(train_x_list[j])
-            new_train_y = [1]*len(train_x_list[i])
-            new_train_y.extend([-1]*len(train_x_list[j]))
+            new_train_y = [1] * len(train_x_list[i])
+            new_train_y.extend([-1] * len(train_x_list[j]))
             modelmatrix[i][j].fit(new_train_x, new_train_y)
 end = time.clock()
 print "learnning time: %f s" % (end - start)
@@ -39,7 +39,7 @@ print "learnning time: %f s" % (end - start)
 # 预测
 predictlist = []
 for k in range(len(test_x)):
-    predict = [0]*len(classes_name)
+    predict = [0] * len(classes_name)
     for i in range(len(classes_name)):
         for j in range(len(classes_name)):
             if i < j:

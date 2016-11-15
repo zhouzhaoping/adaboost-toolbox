@@ -2,6 +2,7 @@
 # 单层决策树
 from numpy import *
 
+
 # 通过阈值比较对数据进行分类
 def stumpClassify(dataMatrix, dimen, threshVal, threshIneq):  # just classify the data
     retArray = ones((shape(dataMatrix)[0], 1))
@@ -10,6 +11,7 @@ def stumpClassify(dataMatrix, dimen, threshVal, threshIneq):  # just classify th
     else:
         retArray[dataMatrix[:, dimen] > threshVal] = -1.0
     return retArray
+
 
 # 遍历stumpClassify函数所有的可能输入值，并找到数据集上最佳的单层决策树
 def buildStump(dataArr, classLabels, D):
@@ -23,10 +25,10 @@ def buildStump(dataArr, classLabels, D):
     for i in range(n):  # 遍历所有的特征
         rangeMin = dataMatrix[:, i].min();
         rangeMax = dataMatrix[:, i].max();
-        stepSize = (rangeMax - rangeMin) / numSteps # 自适应之后阈值变化的步长
+        stepSize = (rangeMax - rangeMin) / numSteps  # 自适应之后阈值变化的步长
         for j in range(-1, int(numSteps) + 1):  # 遍历特征的切分点
             for inequal in ['lt', 'gt']:  # 遍历小于或者大于两种比较
-                threshVal = (rangeMin + float(j) * stepSize) # 当前阈值
+                threshVal = (rangeMin + float(j) * stepSize)  # 当前阈值
                 predictedVals = stumpClassify(dataMatrix, i, threshVal, inequal)  # 调用stump classify（特征、阈值、比较方式）
                 errArr = mat(ones((m, 1)))
                 errArr[predictedVals == labelMat] = 0
