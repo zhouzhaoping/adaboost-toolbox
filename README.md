@@ -23,7 +23,7 @@ avg / total       0.87      0.84      0.84      2100
 </pre>
 
 ####OVO(*one-versus-one*)
-- one_versus_rest.py: 
+- one_versus_rest.py:  
 调用Adaboost使用1v1算法实现多分类
 <pre>
              precision    recall  f1-score   support
