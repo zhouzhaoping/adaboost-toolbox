@@ -14,16 +14,16 @@ train_x, train_y, test_x, test_y = loadData('segmentation.data', 'segmentation.t
 
 # AdaboostMH
 start = time.clock()
-train_y_mat = mat(zeros((len(train_y),class_num)))
+train_y_mat = mat(zeros((len(train_y), class_num)))
 
 for j in xrange(len(train_y)):
     for i in xrange(class_num):
         if train_y[j] == classes_name[i]:
-            train_y_mat[j,i] = 1
+            train_y_mat[j, i] = 1
         else:
-            train_y_mat[j,i] = -1
+            train_y_mat[j, i] = -1
 
-model = AdaBoostMR(class_num=7,max_iter=40) # 基于决策树的adaboost，最大迭代次数max_iter
+model = AdaBoostMR(class_num=7, max_iter=40)  # 基于决策树的adaboost，最大迭代次数max_iter
 model.fit(train_x, train_y_mat)
 
 end = time.clock()
@@ -32,7 +32,7 @@ print "learnning time: %f s" % (end - start)
 # 预测
 predictlist = []
 for i in range(len(classes_name)):
-    predict = model.predict(test_x,i)
+    predict = model.predict(test_x, i)
     predictlist.append(predict)
 
 predict_sum = []

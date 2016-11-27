@@ -1,4 +1,9 @@
-[Image Segmentation data](http://archive.ics.uci.edu/ml/datasets/Image+Segmentation)   
+[Image Segmentation data](http://mlr.cs.umass.edu/ml/datasets/Image+Segmentation)  
+北京大学机器学习作业二  
+组员： 
+[周钊平](https://github.com/zhouzhaoping)
+[胡涛](https://github.com/dongzhuoyao)
+[杨春雪](https://github.com/snowingmush)
 ####基础Adaboost二分类
 - decision_stump.py:  
 单层决策树的实现，buildStump接口找到当前加权数据集上的最优单层决策树
@@ -10,11 +15,49 @@
 ####OVR(*one-versus-rest*)
 - one_versus_rest.py:  
 调用Adaboost使用1vN算法实现多分类
+<pre>
+             precision    recall  f1-score   support
+  BRICKFACE       0.55      0.99      0.71       300
+     CEMENT       0.83      0.65      0.73       300
+    FOLIAGE       0.88      0.81      0.84       300
+      GRASS       0.99      0.98      0.99       300
+       PATH       1.00      0.91      0.95       300
+        SKY       0.99      1.00      1.00       300
+     WINDOW       0.86      0.51      0.64       300
+avg / total       0.87      0.84      0.84      2100
+</pre>
 
-####OVO
-*one-versus-one*
+####OVO(*one-versus-one*)
+- one_versus_rest.py:  
+调用Adaboost使用1v1算法实现多分类
+<pre>
+             precision    recall  f1-score   support
+  BRICKFACE       0.19      1.00      0.32       300
+     CEMENT       0.00      0.00      0.00       300
+    FOLIAGE       0.64      0.31      0.41       300
+      GRASS       1.00      0.95      0.97       300
+       PATH       0.00      0.00      0.00       300
+        SKY       0.03      0.00      0.01       300
+     WINDOW       0.87      0.11      0.20       300
+avg / total       0.39      0.34      0.27      2100
+</pre>  
 
-####Adaboost.MH等算法
-*Improved boosting algorithms using confidence-rated predictions*
+####Adaboost.MH算法(*Improved boosting algorithms using confidence-rated predictions*)
+- adaboostmh.py:  
+基于Adaboost，改写成多分类形式AdaBoostMH
+- run_adaboostmh.py:  
+运行adaboostmh算法
+<pre>
+             precision    recall  f1-score   support
+  BRICKFACE       0.60      0.99      0.74       300
+     CEMENT       0.80      0.63      0.71       300
+    FOLIAGE       0.86      0.81      0.83       300
+      GRASS       1.00      0.98      0.99       300
+       PATH       1.00      0.90      0.95       300
+        SKY       0.99      1.00      1.00       300
+     WINDOW       0.86      0.62      0.72       300
+avg / total       0.87      0.85      0.85      2100
+</pre>
+
 
 
