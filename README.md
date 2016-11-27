@@ -1,5 +1,6 @@
-[Image Segmentation data](http://mlr.cs.umass.edu/ml/datasets/Image+Segmentation)  
 ##Peking University Machine Learning Homework two
+Data Source:[Image Segmentation data](http://mlr.cs.umass.edu/ml/datasets/Image+Segmentation)
+
 
 Group Member：
 [zhouzhaoping](https://github.com/zhouzhaoping)
