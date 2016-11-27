@@ -79,7 +79,6 @@ class AdaBoostMH:
             # print "aggClassEst: ",aggClassEst.T
             aggErrors = multiply(sign(aggClassEst) != mat(y).T, ones((m, 1)))
             errorRate = aggErrors.sum() / m
-            print "total error: ", errorRate
             if errorRate == 0.0: break  # 没有错误提前退出
         return self.__weakClassArr, aggClassEst
 
