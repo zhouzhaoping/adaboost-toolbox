@@ -1,4 +1,9 @@
-[Image Segmentation data](http://mlr.cs.umass.edu/ml/datasets/Image+Segmentation)
+[Image Segmentation data](http://mlr.cs.umass.edu/ml/datasets/Image+Segmentation)  
+北京大学机器学习作业二  
+组员： 
+[周钊平](https://github.com/zhouzhaoping)
+[胡涛](https://github.com/dongzhuoyao)
+[杨春雪](https://github.com/snowingmush)
 ####基础Adaboost二分类
 - decision_stump.py:  
 单层决策树的实现，buildStump接口找到当前加权数据集上的最优单层决策树

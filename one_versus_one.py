@@ -10,6 +10,7 @@ classes_name = ['BRICKFACE', 'SKY', 'FOLIAGE', 'CEMENT', 'WINDOW', 'PATH', 'GRAS
 
 # 数据读取
 train_x, train_y, test_x, test_y = loadData('segmentation.data', 'segmentation.test')
+#test_x, test_y, train_x, train_y = loadData('segmentation.data', 'segmentation.test')
 train_x_list = [[], [], [], [], [], [], []]
 for i in range(len(train_x)):
     index = classes_name.index(train_y[i])
