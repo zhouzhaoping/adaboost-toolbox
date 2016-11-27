@@ -1,4 +1,4 @@
-[Image Segmentation data](http://archive.ics.uci.edu/ml/datasets/Image+Segmentation)   
+[Image Segmentation data](http://mlr.cs.umass.edu/ml/datasets/Image+Segmentation)
 ####基础Adaboost二分类
 - decision_stump.py:  
 单层决策树的实现，buildStump接口找到当前加权数据集上的最优单层决策树
