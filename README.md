@@ -1,11 +1,13 @@
 ##Peking University Machine Learning Homework two
-Data Source:[Image Segmentation data](http://mlr.cs.umass.edu/ml/datasets/Image+Segmentation)
-
-
 Group Member：
 [zhouzhaoping](https://github.com/zhouzhaoping)
 [dongzhuoyao](https://github.com/dongzhuoyao)
 [snowingmush](https://github.com/snowingmush)
+
+Data Source:[Image Segmentation data](http://mlr.cs.umass.edu/ml/datasets/Image+Segmentation)
+
+
+
 ####Basic Adaboost Binary-Classification
 - decision_stump.py:  
 单层决策树的实现，buildStump接口找到当前加权数据集上的最优单层决策树
